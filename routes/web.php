@@ -23,4 +23,4 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     echo("Bienvenido " . \Auth::user()->first_name);
-});
+})->middleware('verify.auth');
